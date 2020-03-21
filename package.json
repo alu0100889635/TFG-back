@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/js/server.js",
-    "start": "node src/js/server.js"
+    "dev": "nodemon src/server/server.js",
+    "start": "node src/server/server.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,9 @@
   "homepage": "https://github.com/alu0100889635/TFG-back#readme",
   "dependencies": {
     "@types/mongodb": "^3.1.28",
-    "express": "^4.17.1"
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
   },
   "devDependencies": {
     "nodemon": "^1.19.4"
