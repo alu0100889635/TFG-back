@@ -1,7 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const phonecallRouter = require("../routers/phonecallRouter");
 const bodyParser = require("body-parser");
+const phonecallRouter = require("../routers/phonecallRouter");
+const personRouter = require("../routers/personRouter");
 
 const app = express();
 
@@ -9,9 +10,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/phonecalls", phonecallRouter);
+app.use("/people", personRouter);
 
 mongoose
-.connect("mongodb://127.0.0.1/emergenciasdb", { useNewUrlParser: true, useUnifiedTopology: true })
+.connect("mongodb://localhost:27017/emergenciasdb", { useNewUrlParser: true, useUnifiedTopology: true })
 .then(console.log("DB connection was succesful"))
 .catch(err => console.log(err));
 

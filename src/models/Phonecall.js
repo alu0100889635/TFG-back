@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const ObservationsSchema = new Schema({ 
     operador_id:{
-        type: ObjectId
+        type: String
     },
     message:{
         type: String
@@ -29,7 +29,7 @@ const PhonecallSchema = new Schema({
 	difficultyBreathing: {
 		type: Boolean
 	},
-	riskGroup: {
+	riskyGroup: {
 		type: Boolean
 	},
 	createdAt: {
@@ -46,4 +46,4 @@ const PhonecallSchema = new Schema({
     }
 });
 
-module.exports = mongoose.model('phonecalls', PhonecallSchema);
+module.exports = mongoose.model('phonecall', PhonecallSchema);

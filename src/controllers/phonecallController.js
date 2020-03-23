@@ -1,8 +1,8 @@
 const Phonecall = require('../models/Phonecall');
 
 async function showAll(req, res) {
-	const Phonecalls = await Phonecall.find();
-	res.json(Phonecalls);
+	const Phonecall = await Phonecall.find();
+	res.json(Phonecall);
 }
 
 async function showPhonecall(req, res) {
