@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const PersonSchema = new Schema({
+const SubjectSchema = new Schema({
 	fullName: {
 		type: String
 	},
@@ -34,4 +34,4 @@ const PersonSchema = new Schema({
 	}
 });
 
-module.exports = mongoose.model('people', PersonSchema);
+module.exports = mongoose.model('subject', SubjectSchema);

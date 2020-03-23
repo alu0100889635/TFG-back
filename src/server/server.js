@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const phonecallRouter = require("../routers/phonecallRouter");
-const personRouter = require("../routers/personRouter");
+const personRouter = require("../routers/subjectRouter");
 
 const app = express();
 
