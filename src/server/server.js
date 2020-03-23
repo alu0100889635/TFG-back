@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/phonecalls", phonecallRouter);
-app.use("/people", personRouter);
+app.use("/subjects", personRouter);
 
 mongoose
 .connect("mongodb://localhost:27017/emergenciasdb", { useNewUrlParser: true, useUnifiedTopology: true })

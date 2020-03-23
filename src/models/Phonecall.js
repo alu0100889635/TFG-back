@@ -32,18 +32,18 @@ const PhonecallSchema = new Schema({
 	riskyGroup: {
 		type: Boolean
 	},
+	subject_id: {
+        type: String
+    },
+    observations: {
+        type: [ObservationsSchema]
+    },
 	createdAt: {
 		type: Date
     },
     updateAt: {
 		type: Date
-	},
-    person_id: {
-        type: String
-    },
-    observations: {
-        type: [ObservationsSchema]
-    }
+	}
 });
 
-module.exports = mongoose.model('phonecall', PhonecallSchema);
+module.exports = mongoose.model('phonecalls', PhonecallSchema);

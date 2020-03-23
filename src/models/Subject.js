@@ -34,4 +34,4 @@ const SubjectSchema = new Schema({
 	}
 });
 
-module.exports = mongoose.model('subject', SubjectSchema);
+module.exports = mongoose.model('subjects', SubjectSchema);
