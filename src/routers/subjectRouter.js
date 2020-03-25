@@ -8,4 +8,5 @@ router.post("/addSubject", subjectController.addSubject);
 router.delete("/:id", subjectController.deleteSubject);
 router.put("/:id", subjectController.updateSubject);
 
+
 module.exports = router;
