@@ -21,6 +21,7 @@
   "homepage": "https://github.com/alu0100889635/TFG-back#readme",
   "dependencies": {
     "@types/mongodb": "^3.1.28",
+    "axios": "^0.19.2",
     "body-parser": "^1.19.0",
     "connect-history-api-fallback": "^1.6.0",
     "cors": "^2.8.5",

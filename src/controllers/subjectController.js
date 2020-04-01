@@ -20,7 +20,7 @@ async function updateSubject(req, res) {
 async function addSubject(req, res) {
 	const newSubject = new Subject(req.body);
 	newSubject.save();
-	res.json(newSubject);
+	res.json(newSubject.id);
 }
 
 async function deleteSubject(req, res) {

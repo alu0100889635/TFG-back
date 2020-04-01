@@ -32,7 +32,7 @@ async function deletePhonecall(req, res) {
 module.exports = { 
     showAll, 
     showPhonecall, 
-    updatePhonecall, 
+	updatePhonecall, 
     addPhonecall, 
     deletePhonecall 
 };

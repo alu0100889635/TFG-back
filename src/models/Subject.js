@@ -11,7 +11,10 @@ const SubjectSchema = new Schema({
 	birthDate: {
 		type: Date
 	},
-	street: {
+	address:{
+		type: String
+	},
+	/* street: {
 		type: String
 	},
 	number: {
@@ -25,7 +28,7 @@ const SubjectSchema = new Schema({
 	},
 	province: {
 		type: String
-    },
+    }, */
     createdAt:{
         type: Date
     },
