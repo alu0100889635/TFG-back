@@ -8,7 +8,6 @@ const cors = require("cors");
 //Routers
 const phonecallRouter = require("../routers/phonecallRouter");
 const subjectRouter = require("../routers/subjectRouter");
-const testRouter = require("../routers/testRouter");
 
 const app = express();
 
@@ -19,7 +18,6 @@ app.use(cors());
 
 app.use("/phonecalls", phonecallRouter);
 app.use("/subjects", subjectRouter);
-app.use("/test", testRouter);
 
 mongoose
 .connect("mongodb://161.35.42.76:27017/emergenciasdb", { useNewUrlParser: true, useUnifiedTopology: true })
