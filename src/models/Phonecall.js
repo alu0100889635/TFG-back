@@ -12,19 +12,24 @@ const ObservationsSchema = new Schema({
 
 const PhonecallSchema = new Schema({
 	recentlyTraveled: {
-		type: Boolean
+		type: Boolean,
+		required: true
 	},
 	sickContact: {
-		type: Boolean
+		type: Boolean,
+		required: true
 	},
 	sickCovidContact: {
-		type: Boolean
+		type: Boolean,
+		required: true
 	},
 	healthOfficial: {
-		type: Boolean
+		type: Boolean,
+		required: true
 	},
 	commonSymptoms: {
-		type: Boolean
+		type: Boolean,
+		required: true
 	},
 	difficultyBreathing: {
 		type: Boolean
