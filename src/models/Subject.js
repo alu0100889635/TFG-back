@@ -3,32 +3,22 @@ const Schema = mongoose.Schema;
 
 const SubjectSchema = new Schema({
 	fullName: {
-		type: String
+		type: String,
+		required: true
 	},
 	dni: {
-		type: String
+		type: String,
+		unique: true,
+		required: true
 	},
 	birthDate: {
-		type: Date
+		type: Date,
+		required: true
 	},
 	address:{
-		type: String
+		type: String,
+		required: true
 	},
-	/* street: {
-		type: String
-	},
-	number: {
-		type: Number
-	},
-	city: {
-		type: String
-	},
-	zipCode: {
-		type: Number
-	},
-	province: {
-		type: String
-    }, */
     createdAt:{
         type: Date
     },
