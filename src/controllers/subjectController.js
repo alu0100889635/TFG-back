@@ -4,7 +4,7 @@ async function showAll(req, res) {
 	let subjects = await Subject.find();
 	for(let i = 0; i < subjects.length; i++){
 		Object.keys(subjects[i]).forEach(key => {
-      		if (key.includes(expression)) {
+      		if (key.includes("__enc_")) {
 				delete(obj[key]);
 			}
 		});
