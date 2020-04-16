@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const mongooseFieldEncryption = require("mongoose-field-encryption").fieldEncryption;
 const Schema = mongoose.Schema;
 
 const SubjectSchema = new Schema({
@@ -26,11 +25,6 @@ const SubjectSchema = new Schema({
     updateAt: {
 		type: Date
 	}
-});
-
-SubjectSchema.plugin(mongooseFieldEncryption, { 
-	fields: ["fullName", "dni", "birthDate", "address"], 
-	secret: "some secret key" 
 });
 
 module.exports = mongoose.model('subjects', SubjectSchema);
