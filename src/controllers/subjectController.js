@@ -8,7 +8,8 @@ async function showAll(req, res) {
 			fullName: subjects[i].fullName,
 			dni: subjects[i].dni,
 			birthDate: subjects[i].birthDate,
-			address: subjects[i].address
+			address: subjects[i].address,
+			__v: subjects[i].__v
 		}
 	}
 	res.json(subjects);
