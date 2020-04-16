@@ -18,14 +18,6 @@ async function showAll(req, res) {
 async function showSubject(req, res) {
 	const id = req.params.id;
 	let foundSubject = await Subject.findById(id);
-	foundSubject = {
-		_id: foundSubject._id,
-		fullName: foundSubject.fullName,
-		dni: foundSubject.dni,
-		birthDate: foundSubject.birthDate,
-		address: foundSubject.address,
-		__v: foundSubject.__v
-	}
 	res.json(foundSubject);
 }
 
