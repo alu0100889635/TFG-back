@@ -47,10 +47,16 @@ async function deleteSubject(req, res) {
 	res.json(id);
 }
 
+async function deleteAll(req,res){
+	Subject.deleteMany();
+	res.send("Se han eliminado todos los subjects correctamente");
+}
+
 module.exports = { 
     showAll, 
     showSubject, 
     updateSubject, 
     addSubject, 
-    deleteSubject 
+	deleteSubject,
+	deleteAll 
 };
