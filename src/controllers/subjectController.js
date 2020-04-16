@@ -51,7 +51,7 @@ async function deleteAll(req,res){
 	const subjects = Subject.find();
 	subjects.forEach(item => {
 		const id = item._id;
-		await Subject.findByIdAndRemove(id)
+		Subject.findByIdAndRemove(id)
 	});
 	res.send("Se han borrado correctamente todos los subjects");
 }
