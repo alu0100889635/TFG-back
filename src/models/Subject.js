@@ -28,6 +28,10 @@ const SubjectSchema = new Schema({
 	}
 });
 
-SubjectSchema.plugin(mongooseFieldEncryption, { fields: ["fullName", "dni", "birthDate", "address"], secret: "some secret key"});
-
+const secretKey = () => {
+	const key = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+	console.log("La key es = ",key);
+	return key;
+}
+SubjectSchema.plugin(mongooseFieldEncryption, { fields: ["fullName", "dni", "birthDate", "address"], secret: secretKey()});
 module.exports = mongoose.model('subjects', SubjectSchema);
