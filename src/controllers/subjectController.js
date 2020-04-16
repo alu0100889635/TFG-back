@@ -1,11 +1,16 @@
 const Subject = require('../models/Subject');
 
 async function showAll(req, res) {
-	const subjects = await Subject.find();
-	console.log(typeof subjects);
-	/* for(let i = 0; i < subjects.length; i++){
-		console.log(subjects[i])
-	} */
+	let subjects = await Subject.find();
+	for(let i = 0; i < subjects.length; i++){
+		subjects[i] = {
+			id_: subjects[i].id_,
+			fullName: subjects[i].fullName,
+			dni: subjects[i].dni,
+			birthDate: subjects[i].birthDate,
+			address: subjects[i].address
+		}
+	}
 	res.json(subjects);
 }
 
