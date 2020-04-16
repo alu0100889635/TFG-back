@@ -2,7 +2,7 @@ const Subject = require('../models/Subject');
 
 async function showAll(req, res) {
 	const subjects = await Subject.find();
-	res.json(subjects);
+	res.json(subjects.id, subjects.fullName, subjects.dni, subjects.birthDate, subjects.address);
 }
 
 async function showSubject(req, res) {
