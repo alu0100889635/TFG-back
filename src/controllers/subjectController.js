@@ -47,20 +47,10 @@ async function deleteSubject(req, res) {
 	res.json(id);
 }
 
-async function deleteAll(req,res){
-	const subjects = Subject.find();
-	subjects.forEach(item => {
-		const id = item._id;
-		Subject.findByIdAndRemove(id)
-	});
-	res.send("Se han borrado correctamente todos los subjects");
-}
-
 module.exports = { 
     showAll, 
     showSubject, 
     updateSubject, 
     addSubject, 
-	deleteSubject,
-	deleteAll 
+	deleteSubject
 };
