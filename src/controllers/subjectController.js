@@ -48,8 +48,12 @@ async function deleteSubject(req, res) {
 }
 
 async function deleteAll(req,res){
-	Subject.deleteMany();
-	res.send("Se han eliminado todos los subjects correctamente");
+	const subjects = Subject.find();
+	subjects.forEach(item => {
+		const id = item._id;
+		await Subject.findByIdAndRemove(id)
+	});
+	res.send("Se han borrado correctamente todos los subjects");
 }
 
 module.exports = { 
