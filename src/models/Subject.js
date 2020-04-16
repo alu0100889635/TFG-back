@@ -33,6 +33,6 @@ SubjectSchema.plugin(mongooseFieldEncryption, {
 	fields: ["fullName", "dni", "birthDate", "address"], 
 	secret: key,
 	saltGenerator: function(secret) {
-		return secret; // should ideally use the secret to return a string of length 16
+		return "1234567890123456"; // should ideally use the secret to return a string of length 16
 	}});
 module.exports = mongoose.model('subjects', SubjectSchema);
