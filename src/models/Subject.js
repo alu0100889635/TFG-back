@@ -49,6 +49,8 @@ const SubjectSchema = new Schema({
     updateAt: {
 		type: Date
 	}
-});
+},
+{ typeKey: '$type' }
+);
 
 module.exports = mongoose.model('subjects', SubjectSchema);
