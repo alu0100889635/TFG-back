@@ -1,7 +1,7 @@
 const Subject = require('../models/Subject');
 
 const deleteKeysBy = (obj, expression) =>
-  Object.keys(obj)
+  Object.keys(obj)[0]
     .forEach(key => {
       if (key.includes(expression)) {
         delete(obj[key]);
