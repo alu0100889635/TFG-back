@@ -20,22 +20,26 @@ const decrypt = (text) => {
 const SubjectSchema = new Schema({
 	fullName: {
 		type: String,
+		required: true,
 		get: decrypt,
 		set: encrypt
 	},
 	dni: {
 		type: String,
 		unique: true,
+		required: true,
 		get: decrypt,
 		set: encrypt
 	},
 	birthDate: {
 		type: Date,
+		required: true,
 		get: decrypt,
 		set: encrypt
 	},
 	address:{
 		type: String,
+		required: true,
 		get: decrypt,
 		set: encrypt
 	},
@@ -45,8 +49,6 @@ const SubjectSchema = new Schema({
     updateAt: {
 		type: Date
 	}
-},
-{ typeKey: '$type' }
-);
+});
 
 module.exports = mongoose.model('subjects', SubjectSchema);
