@@ -1,13 +1,13 @@
 const Subject = require('../models/Subject');
 
 const deleteKeysBy = (obj, expression) =>{
-	Object.keys(obj).forEach(key => {
+	console.log(Object.keys(obj));
+	/* Object.keys(obj).forEach(key => {
 	if (key.includes(expression)) {
 		console.log("entra en el if")
 		delete(obj[key]);
 	}
-	console.log(Object.keys(obj))
-})};
+}) */};
 
 async function showAll(req, res) {
 	let subjects = await Subject.find();
