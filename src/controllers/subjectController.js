@@ -1,7 +1,9 @@
 const Subject = require('../models/Subject');
 
 async function showAll(req, res) {
-	let subjects = await Subject.find()
+	let subjects = await Subject.find(function(err){
+		console.log(err)
+	})
 	.then(res => {
 		for(let i = 0; i < subjects.length; i++){
 			subjects[i] = {
