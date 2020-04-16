@@ -11,8 +11,8 @@ const deleteKeysBy = (obj, expression) =>{
 
 async function showAll(req, res) {
 	let subjects = await Subject.find();
-	subjects.forEach(element => deleteKeysBy(element, '__enc_'));
-	console.log(subjects);
+	subjects.forEach(element => console.log("Elemento", element)/* deleteKeysBy(element, '__enc_' */);
+	//console.log(subjects);
 	res.json(subjects);
 }
 
