@@ -33,5 +33,5 @@ const secretKey = () => {
 	console.log("La key es = ",key);
 	return key;
 }
-SubjectSchema.plugin(mongooseFieldEncryption, { fields: ["fullName", "dni", "birthDate", "address"], secret: secretKey()});
+SubjectSchema.plugin(mongooseFieldEncryption, { fields: ["fullName", "dni", "birthDate", "address"], secret: "123456"});
 module.exports = mongoose.model('subjects', SubjectSchema);
