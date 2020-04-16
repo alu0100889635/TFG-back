@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const mongooseFieldEncryption = require("mongoose-field-encryption").fieldEncryption;
 const Schema = mongoose.Schema;
-const key = require("../server/keyGenerator");
+const key = "mtivpiy2ohlbnl9zfx4hqo";
 
 const SubjectSchema = new Schema({
 	fullName: {
