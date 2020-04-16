@@ -2,7 +2,7 @@ const Subject = require('../models/Subject');
 
 async function showAll(req, res) {
 	let subjects = await Subject.find();
-	for(let i = 0; i < subjects.length; i++){
+	/* for(let i = 0; i < subjects.length; i++){
 		subjects[i] = {
 			_id: subjects[i]._id,
 			fullName: subjects[i].fullName,
@@ -11,14 +11,14 @@ async function showAll(req, res) {
 			address: subjects[i].address,
 			__v: subjects[i].__v
 		}
-	}
+	} */
 	res.json(subjects);
 }
 
 async function showSubject(req, res) {
 	const id = req.params.id;
-	let foundSubject = await Subject.findById(id);
-	foundSubject = {
+	const foundSubject = await Subject.findById(id);
+	let parsedFoundSubject = {
 		_id: foundSubject._id,
 		fullName: foundSubject.fullName,
 		dni: foundSubject.dni,
@@ -26,7 +26,7 @@ async function showSubject(req, res) {
 		address: foundSubject.address,
 		__v: foundSubject.__v
 	}
-	res.json(foundSubject);
+	res.json(parsedFoundSubject);
 }
 
 async function updateSubject(req, res) {
