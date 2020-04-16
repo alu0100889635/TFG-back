@@ -4,7 +4,7 @@ async function showAll(req, res) {
 	let subjects = await Subject.find();
 	for(let i = 0; i < subjects.length; i++){
 		subjects[i] = {
-			id_: subjects[i].id_,
+			_id: subjects[i]._id,
 			fullName: subjects[i].fullName,
 			dni: subjects[i].dni,
 			birthDate: subjects[i].birthDate,
@@ -17,7 +17,15 @@ async function showAll(req, res) {
 
 async function showSubject(req, res) {
 	const id = req.params.id;
-	const foundSubject = await Subject.findById(id);
+	let foundSubject = await Subject.findById(id);
+	foundSubject = {
+		_id: foundSubject._id,
+		fullName: foundSubject.fullName,
+		dni: foundSubject.dni,
+		birthDate: foundSubject.birthDate,
+		address: foundSubject.address,
+		__v: foundSubject.__v
+	}
 	res.json(foundSubject);
 }
 
