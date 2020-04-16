@@ -3,8 +3,9 @@ const Subject = require('../models/Subject');
 async function showAll(req, res) {
 	let subjects = await Subject.find();
 	for(let i = 0; i < subjects.length; i++){
+		console.log("Entro en el for");
 		Object.keys(subjects[i]).forEach(key => {
-			console.log("La key es _= ", key);
+			console.log("La key es = ", key);
       		if (key.includes("__enc_")) {
 				delete(obj[key]);
 			}
