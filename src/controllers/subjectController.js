@@ -2,7 +2,7 @@ const Subject = require('../models/Subject');
 
 async function showAll(req, res) {
 	const subjects = await Subject.find();
-	console.log(typeof(subjects));
+	console.log("hola");
 	res.json(subjects);
 }
 
