@@ -2,10 +2,11 @@ const Subject = require('../models/Subject');
 
 async function showAll(req, res) {
 	let subjects = await Subject.find();
-	for(let i = 0; i < subjects.length; i++){
+	console.log(subjects);
+	/* for(let i = 0; i < subjects.length; i++){
 		['__enc_fullName','__enc_dni', '__enc_birthDate_d', '__enc_birthDate', '__enc_address'].forEach(Reflect.deleteProperty.bind(null, subjects[i]));
 	}
-	res.json(subjects);
+	res.json(subjects); */
 }
 
 async function showSubject(req, res) {
