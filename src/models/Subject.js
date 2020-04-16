@@ -28,6 +28,9 @@ const SubjectSchema = new Schema({
 	}
 });
 
-SubjectSchema.plugin(mongooseFieldEncryption, { fields: ["fullName", "dni", "birthDate", "address"], secret: "some secret key" });
+SubjectSchema.plugin(mongooseFieldEncryption, { 
+	fields: ["fullName", "dni", "birthDate", "address"], 
+	secret: "some secret key" 
+});
 
 module.exports = mongoose.model('subjects', SubjectSchema);

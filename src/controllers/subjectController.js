@@ -19,7 +19,14 @@ async function updateSubject(req, res) {
 
 async function addSubject(req, res) {
 	const newSubject = new Subject(req.body);
-	newSubject.save();
+	newSubject.save(function(err){
+		console.log(newSubject.fullName);
+		console.log(newSubject.__enc_fullName);
+		console.log(newSubject.dni);
+		console.log(newSubject.birthDate);
+		console.log(newSubject.address);
+
+	});
 	res.json(newSubject.id);
 }
 
