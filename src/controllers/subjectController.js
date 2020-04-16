@@ -5,7 +5,8 @@ const deleteKeysBy = (obj, expression) =>
     .forEach(key => {
       if (key.includes(expression)) {
         delete(obj[key]);
-      }
+	  }
+	  console.log(Object.keys(obj))
 });
 
 async function showAll(req, res) {
