@@ -22,7 +22,7 @@ app.use("/subjects", subjectRouter);
 mongoose.connect("mongodb://161.35.42.76:27017/emergenciasdb", {
     "auth": { "authSource": "admin" },
     "user": "root",
-    "pass": "secret"
+    "pass": "culo"
 });
 /* mongoose
 .connect("mongodb://root:secret@161.35.42.76:27017/emergenciasdb", { useNewUrlParser: true, useUnifiedTopology: true }, )
