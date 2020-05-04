@@ -19,15 +19,16 @@ app.use(cors());
 app.use("/phonecalls", phonecallRouter);
 app.use("/subjects", subjectRouter);
 
-mongoose.connect("mongodb://161.35.42.76:27017/emergenciasdb", {
-    "auth": { "authSource": "admin" },
-    "user": "root",
-    "pass": "culo"
-});
-/* mongoose
-.connect("mongodb://root:secret@161.35.42.76:27017/emergenciasdb", { useNewUrlParser: true, useUnifiedTopology: true }, )
+const connectionOptions =  {
+    auth: { authSource: "admin" },
+    user: "root",
+    pass: "secret",
+    useNewUrlParser: true, 
+    useUnifiedTopology: true
+};
+mongoose.connect("mongodb://161.35.42.76:27017/emergenciasdb", connectionOptions)
 .then(console.log("DB connection was succesful"))
-.catch(err => console.log(err)); */
+.catch(err => console.log(err));
 
 app.set("port", process.env.PORT || 3000);
 const port = app.get("port");
