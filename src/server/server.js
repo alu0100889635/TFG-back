@@ -20,7 +20,7 @@ app.use("/phonecalls", phonecallRouter);
 app.use("/subjects", subjectRouter);
 
 mongoose
-.connect("mongodb://161.35.42.76:27017/emergenciasdb", { useNewUrlParser: true, useUnifiedTopology: true })
+.connect("mongodb://root:secret@161.35.42.76:27017/emergenciasdb", { useNewUrlParser: true, useUnifiedTopology: true })
 .then(console.log("DB connection was succesful"))
 .catch(err => console.log(err));
 
