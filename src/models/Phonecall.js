@@ -7,8 +7,15 @@ const ObservationsSchema = new Schema({
     },
     message:{
         type: String
+	},
+	createdAt:{
+		type: Date
+	},
+	updatedAt: {
+		type: Date
 	}
-});
+},
+{timestamps: true});
 
 const PhonecallSchema = new Schema({
 	recentlyTraveled: {
@@ -42,7 +49,13 @@ const PhonecallSchema = new Schema({
     },
     observations: {
         type: [ObservationsSchema]
-    }
+    },
+	createdAt: {
+		type: Date
+    },
+    updateAt: {
+		type: Date
+	}
 });
 
 module.exports = mongoose.model('phonecalls', PhonecallSchema);
