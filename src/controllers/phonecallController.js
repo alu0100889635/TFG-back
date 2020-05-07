@@ -30,7 +30,8 @@ async function deletePhonecall(req, res) {
 }
 
 async function addObservation(req, res) {
-	const phonecall = await Phonecall.findOneAndUpdate(
+	console.log("Hola o cualquier mierda");
+	await Phonecall.findOneAndUpdate(
 		{ _id: req.params.id }, 
 		{ $push: { observations: req.body  } },
 		function (error, success) {
