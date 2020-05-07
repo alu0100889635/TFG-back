@@ -40,7 +40,7 @@ async function addObservation(req, res) {
 					console.log(success);
 				}
 	});
-	res.json(phonecall);
+	res.json(req.body);
 }
 
 async function deleteObservations(req, res) {
