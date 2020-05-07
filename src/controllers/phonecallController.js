@@ -34,18 +34,6 @@ async function addObservation(req, res) {
 	phonecall.observations.push(req.body);
 	phonecall.save();
 	res.json(phonecall);
-	/* console.log("Hola o cualquier mierda");
-	await Phonecall.findOneAndUpdate(
-		{ _id: req.params.id }, 
-		{ $push: { observations: req.body  } },
-		function (error, success) {
-				if (error) {
-					console.log(error);
-				} else {
-					console.log(success);
-				}
-	});
-	res.json(req.body); */
 }
 
 async function deleteObservations(req, res) {
