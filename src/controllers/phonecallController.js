@@ -30,13 +30,21 @@ async function deletePhonecall(req, res) {
 }
 
 async function addObservation(req, res) {
-	const id = req.params.id;
-	const phonecall = await Phonecall.findById(id);
-	const newObservation = req.body;
+	const phonecall = await Phonecall.findOneAndUpdate(
+		{ _id: req.params.id }, 
+		{ $push: { observations: req.body  } },
+		function (error, success) {
+				if (error) {
+					console.log(error);
+				} else {
+					console.log(success);
+				}
+			});
+	/* const newObservation = req.body;
 	phonecall.observations.push(newObservation);
 	phonecall.save()
 	.then(response=>console.log(response))
-	.catch(err=>console.log(err));
+	.catch(err=>console.log(err));*/
 	res.json(phonecall);
 }
 
