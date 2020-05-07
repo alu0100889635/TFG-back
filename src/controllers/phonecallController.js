@@ -34,7 +34,9 @@ async function addObservation(req, res) {
 	const phonecall = await Phonecall.findById(id);
 	const newObservation = req.body;
 	phonecall.observations.push(newObservation);
-	phonecall.save();
+	phonecall.save()
+	.then(response=>console.log(response))
+	.catch(err=>console.log(err));
 	res.json(phonecall);
 }
 
