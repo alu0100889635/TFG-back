@@ -39,12 +39,7 @@ async function addObservation(req, res) {
 				} else {
 					console.log(success);
 				}
-			});
-	/* const newObservation = req.body;
-	phonecall.observations.push(newObservation);
-	phonecall.save()
-	.then(response=>console.log(response))
-	.catch(err=>console.log(err));*/
+	});
 	res.json(phonecall);
 }
 

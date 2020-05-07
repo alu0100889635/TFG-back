@@ -7,7 +7,7 @@ const ObservationsSchema = new Schema({
     },
     message:{
         type: String
-    }
+	}
 });
 
 const PhonecallSchema = new Schema({
@@ -42,13 +42,7 @@ const PhonecallSchema = new Schema({
     },
     observations: {
         type: [ObservationsSchema]
-    },
-	createdAt: {
-		type: Date
-    },
-    updateAt: {
-		type: Date
-	}
+    }
 });
 
 module.exports = mongoose.model('phonecalls', PhonecallSchema);
