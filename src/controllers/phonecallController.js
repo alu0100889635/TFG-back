@@ -43,6 +43,20 @@ async function addObservation(req, res) {
 	res.json(phonecall);
 }
 
+async function deleteObservations(req, res) {
+	const phonecall = await Phonecall.findOneAndUpdate(
+		{ _id: req.params.id }, 
+		{ $set: { observations: [] } },
+		function (error, success) {
+				if (error) {
+					console.log(error);
+				} else {
+					console.log(success);
+				}
+	});
+	res.json(phonecall);
+}
+
 module.exports = { 
     showAll, 
     showPhonecall, 
