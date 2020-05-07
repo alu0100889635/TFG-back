@@ -40,7 +40,7 @@ async function addObservation(req, res) {
 					console.log(success);
 				}
 	});
-	res.json(phonecall);
+	res.json({...phonecall, timestamp: phonecall.getTimestamp()});
 }
 
 module.exports = { 
