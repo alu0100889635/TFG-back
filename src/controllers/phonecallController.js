@@ -63,5 +63,6 @@ module.exports = {
 	updatePhonecall, 
     addPhonecall, 
 	deletePhonecall,
-	addObservation 
+	addObservation,
+	deleteObservations 
 };
