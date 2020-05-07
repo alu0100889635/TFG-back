@@ -2,12 +2,12 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const ObservationsSchema = new Schema({ 
-    operador_id:{
+    operator_id:{
         type: String
     },
     message:{
         type: String
-    } 
+    }
 });
 
 const PhonecallSchema = new Schema({

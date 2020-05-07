@@ -29,10 +29,20 @@ async function deletePhonecall(req, res) {
 	res.json(id);
 }
 
+async function addObservation(req, res) {
+	const id = req.params.id;
+	const phonecall = await Phonecall.findById(id);
+	const newObservation = req.body;
+	phonecall.observations.push(newObservation);
+	phonecall.save();
+	res.json(phonecall);
+}
+
 module.exports = { 
     showAll, 
     showPhonecall, 
 	updatePhonecall, 
     addPhonecall, 
-    deletePhonecall 
+	deletePhonecall,
+	addObservation 
 };
