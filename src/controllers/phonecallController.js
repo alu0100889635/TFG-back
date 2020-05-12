@@ -30,7 +30,9 @@ async function deletePhonecall(req, res) {
 }
 
 async function addObservation(req, res) {
-	const phonecall = await Phonecall.findById(req.params.id);
+	const phonecall = await Phonecall.findById(req.params.id)
+	.then(response=> console.log(response))
+	.catch(e=> console.log(e));;
 	phonecall.observations.push(req.body);
 	phonecall.save();
 	res.json(phonecall);
