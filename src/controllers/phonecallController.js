@@ -36,7 +36,7 @@ async function getObservations(req, res) {
 		await Phonecall.findById(req.params.id)
 		.then(phonecall => {
 			observations = phonecall.observations;
-			res.send(observations);
+			res.json(observations);
 		}).catch(function(err){
 			console.log(err);
 		});
