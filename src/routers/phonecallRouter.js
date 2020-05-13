@@ -4,6 +4,7 @@ const phonecallController = require("../controllers/phonecallController");
 
 router.get("/", phonecallController.showAll);
 router.get("/:id", phonecallController.showPhonecall);
+router.get("/:id", phonecallController.getObservations);
 router.post("/addPhonecall", phonecallController.addPhonecall);
 router.post("/addObservation/:id", phonecallController.addObservation);
 router.delete("/:id", phonecallController.deletePhonecall);

@@ -29,6 +29,22 @@ async function deletePhonecall(req, res) {
 	res.json(id);
 }
 
+async function getObservations(req, res) {
+	console.log(req.params.id);
+	let observations = [];
+	try{
+		await Phonecall.findById(req.params.id)
+		.then(phonecall => {
+			observations = phonecall.observations;
+			res.json(phonecall);
+		}).catch(function(err){
+			console.log(err);
+		});
+	} catch(e){
+		next(e);
+	}
+}
+
 async function addObservation(req, res) {
 	console.log(req.params.id);
 	try{
@@ -66,5 +82,6 @@ module.exports = {
     addPhonecall, 
 	deletePhonecall,
 	addObservation,
-	deleteObservations 
+	deleteObservations,
+	getObservations 
 };
