@@ -30,13 +30,13 @@ async function deletePhonecall(req, res) {
 }
 
 async function getObservations(req, res) {
-	console.log(req.params.id);
+	console.log("Hola", req.params.id);
 	let observations = [];
 	try{
 		await Phonecall.findById(req.params.id)
 		.then(phonecall => {
 			observations = phonecall.observations;
-			res.json(observations);
+			res.send(observations);
 		}).catch(function(err){
 			console.log(err);
 		});
