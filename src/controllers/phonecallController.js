@@ -12,7 +12,7 @@ async function showFirstPhonecall(req, res){
 			const phonecall = response.data;
 			console.log(phonecall);
 			console.log(typeof phonecall);
-			res.json(foundPhonecall[0]);
+			res.json(phonecall[0]);
 		})
 		.catch(err => console.log(err));
 	}catch(e){
