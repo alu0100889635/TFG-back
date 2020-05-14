@@ -5,6 +5,11 @@ async function showAll(req, res) {
 	res.json(phonecall);
 }
 
+async function showFirstPhonecall(req, res){
+	const foundPhonecall = await Phonecall.findBy();
+	res.json(foundPhonecall[0]);
+}
+
 async function showPhonecall(req, res){
 	const id = req.params.id;
 	const foundPhonecall = await Phonecall.findById(id);
@@ -87,5 +92,6 @@ module.exports = {
 	deletePhonecall,
 	addObservation,
 	deleteObservations,
-	getObservations 
+	getObservations,
+	showFirstPhonecall 
 };
