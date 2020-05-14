@@ -33,7 +33,7 @@ async function getObservations(req, res) {
 	console.log("Hola", req.params.id);
 	let observations = [];
 	try{
-		await Phonecall.findById(req.params.id).sort('-createdAt')
+		await Phonecall.findById(req.params.id).sort({date: -1})
 		.then(phonecall => {
 			observations = phonecall.observations;
 			res.json(observations);
