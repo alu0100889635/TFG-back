@@ -6,10 +6,18 @@ async function showAll(req, res) {
 }
 
 async function showFirstPhonecall(req, res){
-	const foundPhonecall = await Phonecall.find();
-	console.log(foundPhonecall);
-	console.log(typeof foundPhonecall);
-	//res.json(foundPhonecall[0]);
+	try{
+		await Phonecall.find()
+		.then(response => {
+			const phonecall = response.data;
+			console.log(phonecall);
+			console.log(typeof phonecall);
+			res.json(foundPhonecall[0]);
+		})
+		.catch(err => console.log(err));
+	}catch(e){
+		next(e);
+	}
 }
 
 async function showPhonecall(req, res){
