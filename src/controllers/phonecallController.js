@@ -29,7 +29,7 @@ async function deletePhonecall(req, res) {
 	res.json(id);
 }
 
-async function getObservation(req, res) {
+async function getObservations(req, res) {
 	console.log("Hola", req.params.id);
 	let temp = [];
 	let observations = [];
