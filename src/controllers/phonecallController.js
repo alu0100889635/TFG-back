@@ -37,7 +37,7 @@ async function getObservations(req, res) {
 		await Phonecall.findById(req.params.id)
 		.then(phonecall => {
 			temp = phonecall.observations;
-			for(let i = temp.length; i>=0; i--){
+			for(let i = temp.length-1; i>=0; i--){
 				observations.push(temp[i]);
 			}
 			res.json(observations);
