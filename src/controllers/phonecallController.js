@@ -29,13 +29,17 @@ async function deletePhonecall(req, res) {
 	res.json(id);
 }
 
-async function getObservations(req, res) {
+async function getObservation(req, res) {
 	console.log("Hola", req.params.id);
+	let temp = [];
 	let observations = [];
 	try{
-		await Phonecall.findById(req.params.id).sort({date: -1})
+		await Phonecall.findById(req.params.id).sort({date: asc})
 		.then(phonecall => {
-			observations = phonecall.observations;
+			temp = phonecall.observations;
+			for(let i = temp.length; i>=0; i--){
+				observations.push(temp[i]);
+			}
 			res.json(observations);
 		}).catch(function(err){
 			console.log(err);
