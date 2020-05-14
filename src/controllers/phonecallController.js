@@ -10,7 +10,7 @@ async function showFirstPhonecall(req, res){
 	const phonecall = await Phonecall.find()
 	console.log(phonecall);
 	console.log(typeof phonecall);
-	res.json(phonecall[0]);
+	res.json(phonecall);
 		
 }
 
