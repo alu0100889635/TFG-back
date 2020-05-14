@@ -6,7 +6,7 @@ async function showAll(req, res) {
 }
 
 async function showFirstPhonecall(req, res){
-	const foundPhonecall = await Phonecall.findBy();
+	const foundPhonecall = await Phonecall.find();
 	res.json(foundPhonecall[0]);
 }
 
