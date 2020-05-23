@@ -1,0 +1,9 @@
+version: '2'
+services:
+  tfg-back:
+    restart: always
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - '3000:3000'
