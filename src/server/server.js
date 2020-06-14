@@ -20,6 +20,7 @@ app.use("/phonecalls", phonecallRouter);
 app.use("/subjects", subjectRouter);
 
 const connectionOptions =  {
+    /* auth: { authSource: "admin" }, */
     user: "alba",
     pass: "secret",
     useNewUrlParser: true, 
