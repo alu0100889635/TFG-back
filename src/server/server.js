@@ -33,4 +33,4 @@ mongoose.connect("mongodb://161.35.42.76:27017/emergenciasdb", connectionOptions
 app.set("port", process.env.PORT || 3000);
 const port = app.get("port");
 
-app.listen(port, () => console.log(`Listening on port ${port}!`));
+app.listen(3000, () => console.log(`Listening on port ${port}!`));
