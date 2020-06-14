@@ -87,6 +87,5 @@ module.exports = {
 	deletePhonecall,
 	addObservation,
 	deleteObservations,
-	getObservations,
-	showFirstPhonecall 
+	getObservations
 };
