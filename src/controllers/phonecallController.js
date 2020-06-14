@@ -5,15 +5,6 @@ async function showAll(req, res) {
 	res.json(phonecall);
 }
 
-async function showFirstPhonecall(req, res){
-		
-	const phonecall = await Phonecall.find()
-	console.log(phonecall);
-	console.log(typeof phonecall);
-	res.json(phonecall);
-		
-}
-
 async function showPhonecall(req, res){
 	const id = req.params.id;
 	const foundPhonecall = await Phonecall.findById(id);
