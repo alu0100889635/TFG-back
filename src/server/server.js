@@ -26,7 +26,7 @@ const connectionOptions =  {
     useNewUrlParser: true, 
     useUnifiedTopology: true
 };
-mongoose.connect("mongodb://161.35.42.76:27017/emergenciasdb", connectionOptions)
+mongoose.connect("mongodb://161.35.42.232:27017/emergenciasdb", connectionOptions)
 .then(console.log("DB connection was succesful"))
 .catch(err => console.log(err));
 
