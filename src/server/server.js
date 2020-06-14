@@ -23,7 +23,8 @@ const connectionOptions =  {
     auth: { authSource: "admin" },
     user: "root",
     pass: "secret",
-    useNewUrlParser: true
+    useNewUrlParser: true, 
+    useUnifiedTopology: true
 };
 mongoose.connect("mongodb://161.35.42.76:27017/emergenciasdb", connectionOptions)
 .then(console.log("DB connection was succesful"))
