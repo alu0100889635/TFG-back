@@ -21,7 +21,7 @@ app.use("/subjects", subjectRouter);
 
 const connectionOptions =  {
     auth: { authSource: "admin" },
-    user: "root",
+    user: "alba",
     pass: "secret",
     useNewUrlParser: true, 
     useUnifiedTopology: true
